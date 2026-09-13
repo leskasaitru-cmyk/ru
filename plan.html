@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИП Помощник - Пошаговый план</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        
+        <!-- Шапка сайта -->
+        <header class="header-card">
+            <a href="about.html" class="logo">ИП Помощник</a>
+            <nav class="navigation">
+                <a href="index.html">Главная</a>
+                <a href="plan.html" class="active">План</a>
+                <a href="oformlenie.html">Оформление</a>
+                <a href="primery.html">Примеры</a>
+                <a href="templates.html">Шаблоны</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="content-card">
+            
+            <div class="page-header">
+                <h1>Пошаговый план работы над проектом</h1>
+                <p class="subtitle">Краткое пояснение: что здесь и зачем</p>
+            </div>
+
+            <!-- Кружки с этапами -->
+            <div class="steps-navigation">
+                <button class="step-btn active" data-step="1">1</button>
+                <button class="step-btn" data-step="2">2</button>
+                <button class="step-btn" data-step="3">3</button>
+                <button class="step-btn" data-step="4">4</button>
+                <button class="step-btn" data-step="5">5</button>
+                <button class="step-btn" data-step="6">6</button>
+            </div>
+
+            <!-- Большая белая карточка с контентом -->
+            <div class="step-card" id="step-card">
+                <div class="step-card-header">
+                    <h2 class="step-title" id="step-title">Этап 1</h2>
+                    <h3 class="step-subtitle" id="step-subtitle">Выбор темы</h3>
+                </div>
+                <div class="step-content" id="step-content">
+                    <!-- Текст будет подставлен через JS -->
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Данные для каждого этапа
+        const stepsData = {
+            1: {
+                title: "Этап 1",
+                subtitle: "Выбор темы",
+                content: `
+                    <p><strong>Тема:</strong> То, что тебе интересно и связано с твоим профилем</p>
+                    <p><strong>Актуальность:</strong> Почему эта тема важна сейчас</p>
+                    <p><strong>Проблема:</strong> Что не так в мире, что ты хочешь изменить</p>
+                    <p><strong>Личное:</strong> Тема должна быть тебе интересна, иначе будет скучно</p>
+                    <p><strong>Совет:</strong> Выбирай тему, по которой сможешь найти информацию</p>
+                `
+            },
+            2: {
+                title: "Этап 2",
+                subtitle: "Цель и задачи",
+                content: `
+                    <p><strong>Цель:</strong> То, что хочешь получить</p>
+                    <p><strong>Задачи:</strong> 3 - 5 шагов [изучить, исследовать, описать, проработать и т.д]</p>
+                    <p><strong>Формулировка:</strong> Составляй цель глаголами</p>
+                    <p><strong>Лишнее:</strong> Создавай цель без воды и сложных слов</p>
+                    <p><strong>Польза:</strong> От цели должна быть польза</p>
+                `
+            },
+            3: {
+                title: "Этап 3",
+                subtitle: "Исследование",
+                content: `
+                    <p><strong>Информация:</strong> Ищи информацию не в одном месте, а в нескольких</p>
+                    <p><strong>Наблюдение:</strong> Проведи опыт или исследование если тема связана с практикой</p>
+                    <p><strong>Источники:</strong> Записывай все источники как только взял оттуда информацию</p>
+                    <p><strong>Фильтр:</strong> Бери только то, что относится к твоей цели</p>
+                    <p><strong>Вывод:</strong> После каждого короткого шага делай вывод, что ты понял, что узнал нового</p>
+                `
+            },
+            4: {
+                title: "Этап 4",
+                subtitle: "Продукт",
+                content: `
+                    <p><strong>Продукт:</strong> Это то, что ты сделал своими руками. Не текст, не реферат, а конкретная вещь или результат</p>
+                    <p><strong>Суть:</strong> Продукт должен быть связан с темой и решать твою цель</p>
+                    <p><strong>Презентация:</strong> Продукт можно показать - на защите ты его демонстрируешь комиссии</p>
+                    <p><strong>Объём:</strong> Если продукт большой - подготовь к демонстрации главную часть, а остальное опиши словами</p>
+                    <p><strong>Совет:</strong> Продукт должен отвечать на вопрос "Что я сделал?" одним предложением</p>
+                `
+            },
+            5: {
+                title: "Этап 5",
+                subtitle: "Оформление",
+                content: `
+                    <p><strong>Части:</strong> Работа состоит из частей: титульный лист, содержание, введение, основная часть, заключение, список литературы</p>
+                    <p><strong>Титульный лист:</strong> Первая страница, где указано: школа, тема, автор, класс, руководитель, год</p>
+                    <p><strong>Содержание:</strong> Список всех частей с номерами</p>
+                    <p><strong>Введение:</strong> Здесь ты пишешь: почему выбрал тему, какая цель, какие задачи</p>
+                    <p><strong>Заключение:</strong> Что получилось, достиг ли цели, какие выводы</p>
+                    <p><strong>Список литературы:</strong> Все источники, которые использовал. Оформляй по порядку</p>
+                    <a href="oformlenie.html" class="step-link">Подробнее →</a>
+                `
+            },
+            6: {
+                title: "Этап 6",
+                subtitle: "Защита",
+                content: `
+                    <p><strong>Время:</strong> Готовишь речь на 5-7 минут - небольше. Комиссия не любит долгие выступления</p>
+                    <p><strong>Презентация:</strong> Слайды которые показываешь во время выступления</p>
+                    <p><strong>Речь:</strong> Расскажи: Почему выбрал тему, какую цель поставил, что делал, какой результат</p>
+                    <p><strong>Структура презентации:</strong> Мало текста, больше картинок, схем, скриншотов продукта</p>
+                    <p><strong>Слайд:</strong> Один слайд - одна мысль. Не пихай всё на одну страницу</p>
+                    <p><strong>Звучание:</strong> Не читай только с листа - рассказывай своими словами. Так выглядит намного увереннее</p>
+                `
+            }
+        };
+
+        // Функция для отображения выбранного шага
+        const stepButtons = document.querySelectorAll('.step-btn');
+        const stepTitle = document.getElementById('step-title');
+        const stepSubtitle = document.getElementById('step-subtitle');
+        const stepContent = document.getElementById('step-content');
+
+        function showStep(stepNumber) {
+            const data = stepsData[stepNumber];
+            stepTitle.textContent = data.title;
+            stepSubtitle.textContent = data.subtitle;
+            stepContent.innerHTML = data.content;
+        }
+
+        // Обработчик кликов
+        stepButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Убираем активный класс у всех
+                stepButtons.forEach(b => b.classList.remove('active'));
+                // Добавляем текущему
+                btn.classList.add('active');
+                // Показываем контент
+                showStep(btn.dataset.step);
+            });
+        });
+
+        // По умолчанию показываем 2-й этап (как на первой картинке)
+        showStep(1);
+        document.querySelector('[data-step="1"]').classList.add('active');
+    </script>
+
+</body>
+</html>

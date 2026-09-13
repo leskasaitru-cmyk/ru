@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИП Помощник - Примеры проектов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        
+        <header class="header-card">
+            <a href="about.html" class="logo">ИП Помощник</a>
+            <nav class="navigation">
+                <a href="index.html">Главная</a>
+                <a href="plan.html">План</a>
+                <a href="oformlenie.html">Оформление</a>
+                <a href="primery.html" class="active">Примеры</a>
+                <a href="templates.html">Шаблоны</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </header>
+
+        <main class="content-card">
+            
+            <div class="page-header">
+                <h1>Примеры проектов</h1>
+                <p class="subtitle">Выбери профиль и посмотри примеры. Нажми на карточку, чтобы раскрыть подробности</p>
+            </div>
+
+            <!-- Фильтры -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="tech">Технический</button>
+                <button class="filter-btn" data-filter="human">Гуманитарный</button>
+                <button class="filter-btn" data-filter="socio">Соцэконом</button>
+                <button class="filter-btn" data-filter="chembio">Химбио</button>
+            </div>
+
+            <!-- Сетка примеров -->
+            <div class="examples-grid">
+
+                <!-- ТЕХНИЧЕСКИЙ -->
+                <div class="example-card" data-category="tech">
+                    <div class="example-header">
+                        <div class="example-tag">Технический</div>
+                        <h3>Умный дом на Arduino</h3>
+                        <p class="example-preview">Система автоматизации для управления светом и температурой в комнате.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Создать систему автоматизации для управления светом и температурой в комнате.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Рабочий прототип с датчиками и мобильным управлением.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Изучить Arduino и основы электроники</li>
+                                <li>Собрать схему с датчиками</li>
+                                <li>Написать код для управления</li>
+                                <li>Протестировать систему</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Школьникам и студентам, изучающим электронику и программирование.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Arduino</span>
+                            <span>C++</span>
+                            <span>Датчики</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card" data-category="tech">
+                    <div class="example-header">
+                        <div class="example-tag">Технический</div>
+                        <h3>Мобильное приложение для учёбы</h3>
+                        <p class="example-preview">Приложение для планирования домашних заданий с напоминаниями.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Помочь школьникам планировать домашние задания и не забывать о дедлайнах.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Приложение с расписанием, напоминаниями и статистикой.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Продумать функционал приложения</li>
+                                <li>Сверстать интерфейс</li>
+                                <li>Написать логику на JavaScript</li>
+                                <li>Провести тестирование</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Ученикам 9–11 классов и студентам.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card" data-category="tech">
+                    <div class="example-header">
+                        <div class="example-tag">Технический</div>
+                        <h3>3D-модель робота-помощника</h3>
+                        <p class="example-preview">Проектирование и печать на 3D-принтере модели робота для быта.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Спроектировать и напечатать на 3D-принтере модель робота для помощи в быту.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Физическая 3D-модель робота с документацией.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Изучить 3D-моделирование в Blender</li>
+                                <li>Спроектировать корпус робота</li>
+                                <li>Напечатать модель на 3D-принтере</li>
+                                <li>Собрать и протестировать</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Людям с ограниченными возможностями и инженерам-любителям.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Blender</span>
+                            <span>3D-принтер</span>
+                            <span>PLA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ГУМАНИТАРНЫЙ -->
+                <div class="example-card" data-category="human">
+                    <div class="example-header">
+                        <div class="example-tag">Гуманитарный</div>
+                        <h3>Влияние соцсетей на речь подростков</h3>
+                        <p class="example-preview">Как интернет-сленг проникает в повседневную речь школьников.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Выяснить, как интернет-сленг влияет на речь современных школьников.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Исследование + буклет с рекомендациями для учителей.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Провести опрос среди одноклассников</li>
+                                <li>Проанализировать результаты</li>
+                                <li>Сделать выводы</li>
+                                <li>Оформить буклет</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Учителям русского языка, родителям, школьникам.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Опрос</span>
+                            <span>Анализ</span>
+                            <span>Наблюдение</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card" data-category="human">
+                    <div class="example-header">
+                        <div class="example-tag">Гуманитарный</div>
+                        <h3>История родного города</h3>
+                        <p class="example-preview">Сохранение истории города через интерактивную карту.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Сохранить историю города и сделать её доступной для школьников.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Интерактивная карта с историческими местами города.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Собрать информацию об исторических местах</li>
+                                <li>Сфотографировать объекты</li>
+                                <li>Оформить карту с описаниями</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Школьникам, туристам, жителям города.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Google Maps</span>
+                            <span>HTML</span>
+                            <span>Архивы</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card" data-category="human">
+                    <div class="example-header">
+                        <div class="example-tag">Гуманитарный</div>
+                        <h3>Психология подростков</h3>
+                        <p class="example-preview">Изучение причин стресса у старшеклассников.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Изучить причины стресса у старшеклассников и найти способы его снижения.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Памятка для школьников + рекомендации родителям.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Провести анкетирование</li>
+                                <li>Обработать данные</li>
+                                <li>Оформить буклет</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Старшеклассникам и школьным психологам.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Анкетирование</span>
+                            <span>Анализ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- СОЦЭКОНОМ -->
+                <div class="example-card" data-category="socio">
+                    <div class="example-header">
+                        <div class="example-tag">Соцэконом</div>
+                        <h3>Бюджет старшеклассника</h3>
+                        <p class="example-preview">Как научить школьников правильно распределять карманные деньги.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Научить школьников правильно распределять карманные деньги.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Шаблон для ведения личного бюджета + инструкция.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Провести опрос о тратах</li>
+                                <li>Проанализировать результаты</li>
+                                <li>Создать шаблон в Google Таблицах</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Ученикам 8–11 классов.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Google Таблицы</span>
+                            <span>Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card" data-category="socio">
+                    <div class="example-header">
+                        <div class="example-tag">Соцэконом</div>
+                        <h3>Малый бизнес в регионе</h3>
+                        <p class="example-preview">Перспективные сферы малого бизнеса в твоём городе.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Выяснить, какие сферы малого бизнеса перспективны в твоём городе.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Бизнес-план с идеей для начинающего предпринимателя.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Изучить рынок города</li>
+                                <li>Провести опрос жителей</li>
+                                <li>Разработать концепцию бизнеса</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Начинающим предпринимателям и школьникам.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>SWOT-анализ</span>
+                            <span>Опрос</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card" data-category="socio">
+                    <div class="example-header">
+                        <div class="example-tag">Соцэконом</div>
+                        <h3>Финансовая грамотность</h3>
+                        <p class="example-preview">Памятка по основам финансовой грамотности для школьников.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Повысить финансовую грамотность школьников.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Памятка по основам финансовой грамотности.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Изучить теорию</li>
+                                <li>Подобрать примеры</li>
+                                <li>Оформить памятку</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Ученикам 8–11 классов.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Анализ</span>
+                            <span>Опрос</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ХИМБИО -->
+                <div class="example-card" data-category="chembio">
+                    <div class="example-header">
+                        <div class="example-tag">Химбио</div>
+                        <h3>Влияние витаминов на организм</h3>
+                        <p class="example-preview">Как разные витамины влияют на самочувствие и здоровье.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Выяснить, как разные витамины влияют на самочувствие и здоровье.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Исследование + таблица содержания витаминов в продуктах.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Изучить литературу о витаминах</li>
+                                <li>Провести наблюдения</li>
+                                <li>Сделать таблицу и выводы</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Школьникам и их родителям.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Анализ</span>
+                            <span>Наблюдение</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card" data-category="chembio">
+                    <div class="example-header">
+                        <div class="example-tag">Химбио</div>
+                        <h3>Экология городского водоёма</h3>
+                        <p class="example-preview">Оценка состояния воды в ближайшем водоёме.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Оценить состояние воды в ближайшем водоёме и предложить способы очистки.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Отчёт с результатами анализа + рекомендации.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Взять пробы воды</li>
+                                <li>Провести химический анализ</li>
+                                <li>Сделать выводы и рекомендации</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Жителям города и экологам.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Хим. анализ</span>
+                            <span>Наблюдение</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card" data-category="chembio">
+                    <div class="example-header">
+                        <div class="example-tag">Химбио</div>
+                        <h3>Микрозелень в домашних условиях</h3>
+                        <p class="example-preview">Выращивание микрозелени дома и её польза.</p>
+                    </div>
+                    <div class="example-body">
+                        <div class="example-section">
+                            <span class="example-label">Цель</span>
+                            <p>Выяснить, как вырастить микрозелень дома и сравнить её с обычными овощами.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Продукт</span>
+                            <p>Мини-ферма + сравнительная таблица пользы.</p>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Задачи</span>
+                            <ul>
+                                <li>Изучить технологию выращивания</li>
+                                <li>Вырастить микрозелень</li>
+                                <li>Сравнить с обычными овощами</li>
+                            </ul>
+                        </div>
+                        <div class="example-section">
+                            <span class="example-label">Кому полезно</span>
+                            <p>Школьникам и семьям.</p>
+                        </div>
+                        <div class="example-footer">
+                            <span>Эксперимент</span>
+                            <span>Наблюдение</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Фильтрация
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const exampleCards = document.querySelectorAll('.example-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+
+                exampleCards.forEach(card => {
+                    const category = card.dataset.category;
+                    // Закрываем все карточки при смене фильтра
+                    card.classList.remove('open');
+
+                    if (filter === 'all' || filter === category) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'fadeIn 0.35s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Раскрытие карточки по клику
+        exampleCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Не раскрываем, если клик по ссылке или кнопке внутри
+                if (e.target.closest('a, button')) return;
+
+                const isOpen = card.classList.contains('open');
+
+                // Закрываем все остальные
+                exampleCards.forEach(c => c.classList.remove('open'));
+
+                // Переключаем текущую
+                if (!isOpen) {
+                    card.classList.add('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
