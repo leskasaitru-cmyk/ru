@@ -27,9 +27,18 @@
 
         <main class="content-card">
             
-            <div class="page-header">
-                <h1>Примеры проектов</h1>
-                <p class="subtitle">Выбери профиль и посмотри примеры. Нажми на карточку, чтобы раскрыть подробности</p>
+            <!-- Верхний блок: заголовок + стрелка вниз -->
+            <div class="page-header page-header-with-arrow">
+                <div>
+                    <h1>Примеры проектов</h1>
+                    <p class="subtitle">Выбери профиль и посмотри примеры. Нажми на карточку, чтобы раскрыть подробности</p>
+                </div>
+                <button class="arrow-down-btn" id="scrollToProject" title="Перейти к моему проекту">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </button>
             </div>
 
             <!-- Фильтры -->
@@ -467,11 +476,74 @@
 
             </div>
 
+            <!-- =====================================================
+                 ОСОБАЯ ПЛАШКА «МОЙ ПРОЕКТ» — В САМОМ НИЗУ СТРАНИЦЫ
+                 ===================================================== -->
+            <div class="my-project-card" id="myProject">
+                <div class="my-project-header">
+                    <div class="my-project-badge">Мой проект</div>
+                    <h3>Сайт-помощник для индивидуального проекта</h3>
+                    <p class="my-project-preview">Личный проект автора сайта: полный цикл работы — от исследования до защиты. Нажми, чтобы раскрыть материалы.</p>
+                </div>
+
+                <div class="my-project-body">
+                    <p class="my-project-note">
+                        <strong>Скоро здесь появится:</strong> полный текст проекта (Word), презентация для защиты и речь, которую я произносил на защите.
+                    </p>
+
+                    <div class="my-project-files">
+                        <a href="files/moy_proekt.docx" download class="file-card">
+                            <div class="file-icon">📄</div>
+                            <div class="file-info">
+                                <h4>Пояснительная записка</h4>
+                                <p>Полный текст проекта в формате Word</p>
+                            </div>
+                            <div class="file-download">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="files/moya_prezentaciya.pptx" download class="file-card">
+                            <div class="file-icon">📊</div>
+                            <div class="file-info">
+                                <h4>Презентация для защиты</h4>
+                                <p>Слайды, которые я показывал комиссии</p>
+                            </div>
+                            <div class="file-download">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="files/moya_rech.docx" download class="file-card">
+                            <div class="file-icon">🎤</div>
+                            <div class="file-info">
+                                <h4>Речь для защиты</h4>
+                                <p>Текст выступления перед комиссией</p>
+                            </div>
+                            <div class="file-download">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 
     <script>
-        // Фильтрация
+        // =====================================================
+        // 1. ФИЛЬТРАЦИЯ ПРИМЕРОВ (особая плашка не фильтруется)
+        // =====================================================
         const filterButtons = document.querySelectorAll('.filter-btn');
         const exampleCards = document.querySelectorAll('.example-card');
 
@@ -483,7 +555,6 @@
 
                 exampleCards.forEach(card => {
                     const category = card.dataset.category;
-                    // Закрываем все карточки при смене фильтра
                     card.classList.remove('open');
 
                     if (filter === 'all' || filter === category) {
@@ -496,22 +567,34 @@
             });
         });
 
-        // Раскрытие карточки по клику
+        // =====================================================
+        // 2. РАСКРЫТИЕ КАРТОЧЕК-ПРИМЕРОВ
+        // =====================================================
         exampleCards.forEach(card => {
             card.addEventListener('click', (e) => {
-                // Не раскрываем, если клик по ссылке или кнопке внутри
                 if (e.target.closest('a, button')) return;
-
                 const isOpen = card.classList.contains('open');
-
-                // Закрываем все остальные
                 exampleCards.forEach(c => c.classList.remove('open'));
-
-                // Переключаем текущую
-                if (!isOpen) {
-                    card.classList.add('open');
-                }
+                if (!isOpen) card.classList.add('open');
             });
+        });
+
+        // =====================================================
+        // 3. РАСКРЫТИЕ ОСОБОЙ ПЛАШКИ «МОЙ ПРОЕКТ»
+        // =====================================================
+        const myProject = document.getElementById('myProject');
+        myProject.addEventListener('click', (e) => {
+            if (e.target.closest('a')) return;
+            myProject.classList.toggle('open');
+        });
+
+        // =====================================================
+        // 4. СТРЕЛКА ВНИЗ — ПЛАВНЫЙ СКРОЛЛ К ПЛАШКЕ «МОЙ ПРОЕКТ»
+        // =====================================================
+        document.getElementById('scrollToProject').addEventListener('click', () => {
+            myProject.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Автоматически раскрываем плашку после прокрутки
+            setTimeout(() => myProject.classList.add('open'), 500);
         });
     </script>
 
