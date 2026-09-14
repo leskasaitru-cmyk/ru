@@ -62,10 +62,24 @@
                 </div>
                 
                 <div class="hero-square">
-                    <div class="qr-container">
+                    <div class="qr-container" id="qrOpen" role="button" tabindex="0" aria-label="Открыть QR-код на весь экран">
                         <img src="files/qr.png" alt="QR-код сайта" class="qr-image">
                     </div>
-                    <p class="square-text">Отсканируй, чтобы открыть сайт с телефона</p>
+                    <p class="square-text">Отсканируй, чтобы открыть сайт с телефона. Нажми на QR — откроется на весь экран</p>
+                </div>
+
+                <!-- Модальное окно с QR-кодом на весь экран -->
+                <div class="qr-modal" id="qrModal" aria-hidden="true">
+                    <button class="qr-modal-close" id="qrClose" aria-label="Закрыть">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="qr-modal-content">
+                        <img src="files/qr.png" alt="QR-код сайта — большой" class="qr-modal-image">
+                        <p class="qr-modal-text">Наведи камеру телефона на QR-код</p>
+                    </div>
                 </div>
             </div>
 
@@ -160,6 +174,60 @@
             var newTheme = theme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+        });
+    })();
+</script>
+
+
+<script>
+    // =====================================================
+    // МОДАЛЬНОЕ ОКНО С QR-КОДОМ НА ВЕСЬ ЭКРАН
+    // =====================================================
+    (function() {
+        var qrOpen = document.getElementById('qrOpen');
+        var qrModal = document.getElementById('qrModal');
+        var qrClose = document.getElementById('qrClose');
+
+        // Открыть по клику на рамку с QR
+        qrOpen.addEventListener('click', function() {
+            qrModal.classList.add('active');
+            qrModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden'; // Запрещаем прокрутку фона
+        });
+
+        // Открыть по Enter / Space (для доступности)
+        qrOpen.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                qrModal.classList.add('active');
+                qrModal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        // Закрыть по клику на крестик
+        qrClose.addEventListener('click', function() {
+            qrModal.classList.remove('active');
+            qrModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        });
+
+        // Закрыть по клику на тёмный фон вокруг картинки
+        qrModal.addEventListener('click', function(e) {
+            if (e.target === qrModal) {
+                qrModal.classList.remove('active');
+                qrModal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Закрыть по клавише Esc
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && qrModal.classList.contains('active')) {
+                qrModal.classList.remove('active');
+                qrModal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
         });
     })();
 </script>
