@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИП Помощник - Оформление</title>
+    <title>ИП Помощник - Главная</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Если пользователь уже видел анимацию в этой сессии — отключаем её
+        if (sessionStorage.getItem('homeAnimated') === 'yes') {
+            document.documentElement.classList.add('no-animation');
+        } else {
+            sessionStorage.setItem('homeAnimated', 'yes');
+        }
+    </script>
 </head>
-<body>
+<body class="home-page">
 
     <div class="app-wrapper">
         
-        <!-- Шапка сайта -->
         <header class="header-card">
     <a href="about.html" class="logo">ИП Помощник</a>
     <nav class="navigation">
@@ -42,152 +49,104 @@
     </button>
 </header>
 
-        <!-- Основной контент -->
         <main class="content-card">
             
-            <!-- Верхний блок: Заголовок + Плашка с требованиями -->
-            <div class="oformlenie-hero">
-                <div class="oformlenie-title">
-                    <h1>Как оформить индивидуальный проект</h1>
-                    <p class="subtitle">Основные правила оформления работы</p>
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h1>Помощник для индивидуального проекта</h1>
+                    <p class="subtitle">Всё, что нужно знать ученику 10 класса - от выбора темы до защиты</p>
+                    <div class="buttons-group">
+                        <a href="plan.html" class="btn btn-primary">Начать</a>
+                        <a href="primery.html" class="btn btn-secondary">Примеры проектов</a>
+                    </div>
                 </div>
                 
-                <!-- Плашка с требованиями -->
-                <aside class="requirements-card">
-                    <h3>Требования к оформлению</h3>
-                    <ul>
-                        <li>Шрифт — Times New Roman, 14 pt</li>
-                        <li>Интервал — 1,5</li>
-                        <li>Поля — 2 см со всех сторон</li>
-                        <li>Объём — 10–15 страниц без приложений</li>
-                        <li>Номера страниц — внизу по центру</li>
-                        <li>Заголовки — Полужирные, с новой страницы</li>
-                    </ul>
-                </aside>
+                <div class="hero-square">
+                    <div class="qr-container">
+                        <img src="files/qr.png" alt="QR-код сайта" class="qr-image">
+                    </div>
+                    <p class="square-text">Отсканируй, чтобы открыть сайт с телефона</p>
+                </div>
             </div>
 
-            <!-- Секции (карточки) -->
-            <div class="sections-list">
-
-                <!-- 1. Титульный лист -->
-                <div class="info-card">
-                    <h3>Титульный лист</h3>
-                    <ul>
-                        <li>Первая страница работы</li>
-                        <li>Указывается: школа, тема, ФИО автора, класс, ФИО руководителя</li>
-                        <li>Город и год — внизу</li>
-                        <li>Тема пишется без слова «тема»</li>
-                        <li>Оформляется по образцу</li>
-                    </ul>
-                </div>
-
-                <!-- 2. Содержание -->
-                <div class="info-card">
-                    <h3>Содержание</h3>
-                    <ul>
-                        <li>Список всех частей работы</li>
-                        <li>У каждой части — номер страницы</li>
-                        <li>Разделы идут в том же порядке, что и в работе</li>
-                        <li>Заголовки совпадают с заголовками в тексте</li>
-                        <li>Оформляется на отдельной странице</li>
-                    </ul>
-                </div>
-
-                <!-- 3. Введение -->
-                <div class="info-card">
-                    <h3>Введение</h3>
-                    <ul>
-                        <li>Почему выбрал эту тему</li>
-                        <li>Цель работы — одна</li>
-                        <li>Задачи — 3–5 шагов</li>
-                        <li>Актуальность темы</li>
-                        <li>Объём — 1–2 страницы</li>
-                    </ul>
-                </div>
-
-                <!-- 4. Основная часть -->
-                <div class="info-card">
-                    <h3>Основная часть</h3>
-                    <ul>
-                        <li>Всё исследование по теме</li>
-                        <li>Описание того, что ты делал</li>
-                        <li>Таблицы, схемы, картинки — по необходимости</li>
-                        <li>Каждая глава с новой страницы</li>
-                        <li>Самый большой раздел работы</li>
-                    </ul>
-                </div>
-
-                <!-- 5. Заключение -->
-                <div class="info-card">
-                    <h3>Заключение</h3>
-                    <ul>
-                        <li>Что получилось в итоге</li>
-                        <li>Достиг ли ты цели</li>
-                        <li>Какие выводы сделал</li>
-                        <li>Где можно применить результат</li>
-                        <li>Объём — 1–2 страницы</li>
-                    </ul>
-                </div>
-
-                <!-- 6. Список литературы -->
-                <div class="info-card">
-                    <h3>Список литературы</h3>
-                    <ul>
-                        <li>Все источники, которые использовал</li>
-                        <li>Оформляются по порядку</li>
-                        <li>Указывается: автор, название, год, издательство</li>
-                        <li>Сайты — с полной ссылкой</li>
-                        <li>Нумерация по алфавиту или по порядку упоминания</li>
-                    </ul>
-                </div>
-
-                <!-- 7. Приложения -->
-                <div class="info-card">
-                    <h3>Приложения</h3>
-                    <ul>
-                        <li>Картинки, таблицы, схемы, фото продукта</li>
-                        <li>Каждое приложение с номером: «Приложение 1»</li>
-                        <li>Ссылка на приложение в тексте работы</li>
-                        <li>Идут после списка литературы</li>
-                        <li>Не входят в общий объём работы</li>
-                    </ul>
-                </div>
-
+            <div class="info-section">
+                <h2>Что такое индивидуальный проект?</h2>
+                <p>Индивидуальный проект — это самостоятельная работа, которую каждый ученик 10 класса выполняет в течение года. Ты выбираешь тему, изучаешь её, создаёшь продукт и защищаешь перед комиссией.</p>
             </div>
 
-            <!-- Нижняя панель: кнопки -->
-            <div class="bottom-actions">
+            <div class="grid-container home-grid">
                 
-                <!-- Кнопка скачать шаблон (слева) -->
-                <a href="templates.html" class="btn-download-template">
-                    Скачать шаблон титульного листа
+                <a href="plan.html" class="card home-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect style="opacity:0.2" width="25" height="13" x="3" y="15" rx="1.25" ry="1.25"/>
+                            <path style="fill:#8b58c5" d="M 3,21.75 C 3,22.442 3.5575,23 4.25,23 H 26.75 C 27.442,23 28,22.442 28,21.75 V 8.25 C 28,7.5575 27.442,7 26.75,7 H 14 V 6.25 C 14,5.5575 13.443,5 12.75,5 H 4.25 C 3.5575,5 3,5.5575 3,6.25"/>
+                            <rect style="opacity:0.2" width="25" height="13" x="3" y="13" rx="1.25" ry="1.25"/>
+                            <rect style="fill:#e4e4e4" width="21" height="10" x="5" y="9" rx="1.25" ry="1.25"/>
+                            <rect style="fill:#a674de" width="25" height="13" x="3" y="14" rx="1.25" ry="1.25"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>План</h3>
+                        <p>Пошаговый план работы над проектом</p>
+                    </div>
                 </a>
 
-                <!-- Кнопка наверх (справа) -->
-                <button class="btn-scroll-top" id="scrollTopBtn" title="Наверх">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="12" y1="19" x2="12" y2="5"></line>
-                        <polyline points="5 12 12 5 19 12"></polyline>
-                    </svg>
-                </button>
+                <a href="oformlenie.html" class="card home-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect style="opacity:0.2" width="25" height="16" x="3" y="12" rx="1.25" ry="1.25"/>
+                            <path style="fill:#8b58c5" d="M 3,21.75 C 3,22.442 3.5575,23 4.25,23 H 26.75 C 27.442,23 28,22.442 28,21.75 V 8.25 C 28,7.5575 27.442,7 26.75,7 H 14 V 6.25 C 14,5.5575 13.443,5 12.75,5 H 4.25 C 3.5575,5 3,5.5575 3,6.25"/>
+                            <rect style="opacity:0.2" width="25" height="16" x="3" y="10" rx="1.25" ry="1.25"/>
+                            <rect style="fill:#e4e4e4" width="21" height="10" x="5" y="9" rx="1.25" ry="1.25"/>
+                            <rect style="fill:#a674de" width="25" height="16" x="3" y="11" rx="1.25" ry="1.25"/>
+                            <path style="fill:#3a284d" d="M 16,14 C 13.239,14 11,16.239 11,19 11,21.761 13.239,24 16,24 18.761,24 21,21.761 21,19 21,16.239 18.761,14 16,14 Z M 15,16 H 17 V 20 H 15 Z M 16,21 C 16.552,21 17,21.448 17,22 17,22.552 16.552,23 16,23 15.448,23 15,22.552 15,22 15,21.448 15.448,21 16,21 Z"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>Оформление</h3>
+                        <p>Как правильно оформить работу</p>
+                    </div>
+                </a>
+
+                <a href="primery.html" class="card home-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect style="opacity:0.2" width="25" height="16" x="3" y="12" rx="1.25" ry="1.25"/>
+                            <path style="fill:#8b58c5" d="M 3,21.75 C 3,22.442 3.5575,23 4.25,23 H 26.75 C 27.442,23 28,22.442 28,21.75 V 8.25 C 28,7.5575 27.442,7 26.75,7 H 14 V 6.25 C 14,5.5575 13.443,5 12.75,5 H 4.25 C 3.5575,5 3,5.5575 3,6.25"/>
+                            <rect style="opacity:0.2" width="25" height="16" x="3" y="10" rx="1.25" ry="1.25"/>
+                            <rect style="fill:#e4e4e4" width="21" height="10" x="5" y="9" rx="1.25" ry="1.25"/>
+                            <rect style="fill:#a674de" width="25" height="16" x="3" y="11" rx="1.25" ry="1.25"/>
+                            <path style="fill:#3a284d" d="M 12.75,14 C 12.334,14 12,14.334 12,14.75 V 23.25 C 12,23.666 12.334,24 12.75,24 H 19.25 C 19.666,24 20,23.666 20,23.25 V 16.5 L 17.5,14 Z"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>Примеры</h3>
+                        <p>Примеры проектов по профилям</p>
+                    </div>
+                </a>
+
+                <a href="templates.html" class="card home-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <rect style="opacity:0.2" width="25" height="16" x="3" y="12" rx="1.25" ry="1.25"/>
+                            <path style="fill:#8b58c5" d="M 3,21.75 C 3,22.442 3.5575,23 4.25,23 H 26.75 C 27.442,23 28,22.442 28,21.75 V 8.25 C 28,7.5575 27.442,7 26.75,7 H 14 V 6.25 C 14,5.5575 13.443,5 12.75,5 H 4.25 C 3.5575,5 3,5.5575 3,6.25"/>
+                            <rect style="opacity:0.2" width="25" height="16" x="3" y="10" rx="1.25" ry="1.25"/>
+                            <rect style="fill:#e4e4e4" width="21" height="10" x="5" y="9" rx="1.25" ry="1.25"/>
+                            <rect style="fill:#a674de" width="25" height="16" x="3" y="11" rx="1.25" ry="1.25"/>
+                            <path style="fill:#3a284d" d="M 15,14 V 18 H 13 L 16,22 19,18 H 17 V 14 Z M 12,22 V 24 H 20 V 22 Z"/>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <h3>Шаблоны</h3>
+                        <p>Готовые файлы для скачивания</p>
+                    </div>
+                </a>
 
             </div>
-
         </main>
     </div>
-
-    <script>
-        // Кнопка "Наверх"
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-    <script>
+<script>
     (function() {
         var themeToggle = document.getElementById('themeToggle');
         var currentTheme = localStorage.getItem('theme') || 'light';
