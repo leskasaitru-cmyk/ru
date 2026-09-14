@@ -15,16 +15,32 @@
         
         <!-- Шапка сайта -->
         <header class="header-card">
-            <a href="about.html" class="logo">ИП Помощник</a>
-            <nav class="navigation">
-                <a href="index.html">Главная</a>
-                <a href="plan.html" class="active">План</a>
-                <a href="oformlenie.html">Оформление</a>
-                <a href="primery.html">Примеры</a>
-                <a href="templates.html">Шаблоны</a>
-                <a href="faq.html">FAQ</a>
-            </nav>
-        </header>
+    <a href="about.html" class="logo">ИП Помощник</a>
+    <nav class="navigation">
+        <a href="index.html">Главная</a>
+        <a href="plan.html">План</a>
+        <a href="oformlenie.html">Оформление</a>
+        <a href="primery.html">Примеры</a>
+        <a href="templates.html">Шаблоны</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" title="Переключить тему">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+        </svg>
+    </button>
+</header>
 
         <!-- Основной контент -->
         <main class="content-card">
@@ -161,6 +177,23 @@
         showStep(1);
         document.querySelector('[data-step="1"]').classList.add('active');
     </script>
+<script>
+    (function() {
+        var themeToggle = document.getElementById('themeToggle');
+        var currentTheme = localStorage.getItem('theme') || 'light';
+
+        // Применяем сохранённую тему сразу при загрузке
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        // Клик по кнопке — переключаем тему
+        themeToggle.addEventListener('click', function() {
+            var theme = document.documentElement.getAttribute('data-theme');
+            var newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    })();
+</script>
 
 </body>
 </html>
