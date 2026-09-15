@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ИП Помощник - Примеры проектов</title>
-    <link rel="icon" type="image/png" href="files/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,36 +14,35 @@
     <div class="app-wrapper">
         
         <header class="header-card">
-    <a href="about.html" class="logo">ИП Помощник</a>
-    <nav class="navigation">
-        <a href="index.html">Главная</a>
-        <a href="plan.html">План</a>
-        <a href="oformlenie.html">Оформление</a>
-        <a href="primery.html" class="active">Примеры</a>
-        <a href="templates.html">Шаблоны</a>
-        <a href="faq.html">FAQ</a>
-    </nav>
-    <button class="theme-toggle" id="themeToggle" title="Переключить тему">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"></circle>
-            <line x1="12" y1="2" x2="12" y2="4"></line>
-            <line x1="12" y1="20" x2="12" y2="22"></line>
-            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
-            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
-            <line x1="2" y1="12" x2="4" y2="12"></line>
-            <line x1="20" y1="12" x2="22" y2="12"></line>
-            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
-            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
-        </svg>
-    </button>
-</header>
+            <a href="about.html" class="logo">ИП Помощник</a>
+            <nav class="navigation">
+                <a href="index.html">Главная</a>
+                <a href="plan.html">План</a>
+                <a href="oformlenie.html">Оформление</a>
+                <a href="primery.html" class="active">Примеры</a>
+                <a href="templates.html">Шаблоны</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" title="Переключить тему">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <line x1="12" y1="2" x2="12" y2="4"></line>
+                    <line x1="12" y1="20" x2="12" y2="22"></line>
+                    <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+                    <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+                    <line x1="2" y1="12" x2="4" y2="12"></line>
+                    <line x1="20" y1="12" x2="22" y2="12"></line>
+                    <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+                    <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+                </svg>
+            </button>
+        </header>
 
         <main class="content-card">
             
-            <!-- Верхний блок: заголовок + стрелка вниз -->
             <div class="page-header page-header-with-arrow">
                 <div>
                     <h1>Примеры проектов</h1>
@@ -61,16 +59,16 @@
             <!-- Фильтры -->
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">Все</button>
-                <button class="filter-btn" data-filter="tech">Технический</button>
+                <button class="filter-btn" data-filter="tech">Технологический</button>
                 <button class="filter-btn" data-filter="human">Гуманитарный</button>
-                <button class="filter-btn" data-filter="socio">Соцэконом</button>
-                <button class="filter-btn" data-filter="chembio">Химбио</button>
+                <button class="filter-btn" data-filter="socio">Социально-экономический</button>
+                <button class="filter-btn" data-filter="chembio">Естественно-научный</button>
             </div>
 
             <!-- Сетка примеров -->
             <div class="examples-grid">
 
-                <!-- ТЕХНИЧЕСКИЙ -->
+                <!-- ТЕХНОЛОГИЧЕСКИЙ -->
                 <div class="example-card" data-category="tech">
                     <div class="example-header">
                         <div class="example-tag">Технологический</div>
@@ -109,7 +107,7 @@
 
                 <div class="example-card" data-category="tech">
                     <div class="example-header">
-                        <div class="example-tag">Технический</div>
+                        <div class="example-tag">Технологический</div>
                         <h3>Мобильное приложение для учёбы</h3>
                         <p class="example-preview">Приложение для планирования домашних заданий с напоминаниями.</p>
                     </div>
@@ -145,7 +143,7 @@
 
                 <div class="example-card" data-category="tech">
                     <div class="example-header">
-                        <div class="example-tag">Технический</div>
+                        <div class="example-tag">Технологический</div>
                         <h3>3D-модель робота-помощника</h3>
                         <p class="example-preview">Проектирование и печать на 3D-принтере модели робота для быта.</p>
                     </div>
@@ -285,10 +283,10 @@
                     </div>
                 </div>
 
-                <!-- СОЦЭКОНОМ -->
+                <!-- СОЦИАЛЬНО-ЭКОНОМИЧЕСКИЙ -->
                 <div class="example-card" data-category="socio">
                     <div class="example-header">
-                        <div class="example-tag">Соцэконом</div>
+                        <div class="example-tag">Социально-экономический</div>
                         <h3>Бюджет старшеклассника</h3>
                         <p class="example-preview">Как научить школьников правильно распределять карманные деньги.</p>
                     </div>
@@ -322,7 +320,7 @@
 
                 <div class="example-card" data-category="socio">
                     <div class="example-header">
-                        <div class="example-tag">Соцэконом</div>
+                        <div class="example-tag">Социально-экономический</div>
                         <h3>Малый бизнес в регионе</h3>
                         <p class="example-preview">Перспективные сферы малого бизнеса в твоём городе.</p>
                     </div>
@@ -356,7 +354,7 @@
 
                 <div class="example-card" data-category="socio">
                     <div class="example-header">
-                        <div class="example-tag">Соцэконом</div>
+                        <div class="example-tag">Социально-экономический</div>
                         <h3>Финансовая грамотность</h3>
                         <p class="example-preview">Памятка по основам финансовой грамотности для школьников.</p>
                     </div>
@@ -388,12 +386,12 @@
                     </div>
                 </div>
 
-                <!-- ХИМБИО -->
+                <!-- ЕСТЕСТВЕННО-НАУЧНЫЙ -->
                 <div class="example-card" data-category="chembio">
                     <div class="example-header">
-                        <div class="example-tag">Химбио</div>
+                        <div class="example-tag">Естественно-научный</div>
                         <h3>Влияние витаминов на организм</h3>
-                        <p class="example-preview">Как разные витамины влияют на самочувствие и здоровье.</p>
+                        <p class="example-preview">Как разные витамины влияют на самочувствие и здоровье школьника.</p>
                     </div>
                     <div class="example-body">
                         <div class="example-section">
@@ -425,9 +423,9 @@
 
                 <div class="example-card" data-category="chembio">
                     <div class="example-header">
-                        <div class="example-tag">Химбио</div>
+                        <div class="example-tag">Естественно-научный</div>
                         <h3>Экология городского водоёма</h3>
-                        <p class="example-preview">Оценка состояния воды в ближайшем водоёме.</p>
+                        <p class="example-preview">Оценка состояния воды в ближайшем водоёме и способы её очистки.</p>
                     </div>
                     <div class="example-body">
                         <div class="example-section">
@@ -459,9 +457,9 @@
 
                 <div class="example-card" data-category="chembio">
                     <div class="example-header">
-                        <div class="example-tag">Химбио</div>
+                        <div class="example-tag">Естественно-научный</div>
                         <h3>Микрозелень в домашних условиях</h3>
-                        <p class="example-preview">Выращивание микрозелени дома и её польза.</p>
+                        <p class="example-preview">Выращивание микрозелени дома и её польза для организма.</p>
                     </div>
                     <div class="example-body">
                         <div class="example-section">
@@ -493,9 +491,7 @@
 
             </div>
 
-            <!-- =====================================================
-                 ОСОБАЯ ПЛАШКА «МОЙ ПРОЕКТ» — В САМОМ НИЗУ СТРАНИЦЫ
-                 ===================================================== -->
+            <!-- Особая плашка «Мой проект» -->
             <div class="my-project-card" id="myProject">
                 <div class="my-project-header">
                     <div class="my-project-badge">Мой проект</div>
@@ -558,9 +554,7 @@
     </div>
 
     <script>
-        // =====================================================
-        // 1. ФИЛЬТРАЦИЯ ПРИМЕРОВ (особая плашка не фильтруется)
-        // =====================================================
+        // Фильтрация
         const filterButtons = document.querySelectorAll('.filter-btn');
         const exampleCards = document.querySelectorAll('.example-card');
 
@@ -584,9 +578,7 @@
             });
         });
 
-        // =====================================================
-        // 2. РАСКРЫТИЕ КАРТОЧЕК-ПРИМЕРОВ
-        // =====================================================
+        // Раскрытие карточек
         exampleCards.forEach(card => {
             card.addEventListener('click', (e) => {
                 if (e.target.closest('a, button')) return;
@@ -596,41 +588,33 @@
             });
         });
 
-        // =====================================================
-        // 3. РАСКРЫТИЕ ОСОБОЙ ПЛАШКИ «МОЙ ПРОЕКТ»
-        // =====================================================
+        // Раскрытие плашки «Мой проект»
         const myProject = document.getElementById('myProject');
         myProject.addEventListener('click', (e) => {
             if (e.target.closest('a')) return;
             myProject.classList.toggle('open');
         });
 
-        // =====================================================
-        // 4. СТРЕЛКА ВНИЗ — ПЛАВНЫЙ СКРОЛЛ К ПЛАШКЕ «МОЙ ПРОЕКТ»
-        // =====================================================
+        // Стрелка вниз — скролл к «Мой проект»
         document.getElementById('scrollToProject').addEventListener('click', () => {
             myProject.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            // Автоматически раскрываем плашку после прокрутки
             setTimeout(() => myProject.classList.add('open'), 500);
         });
+
+        // Переключение темы
+        (function() {
+            var themeToggle = document.getElementById('themeToggle');
+            var currentTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            themeToggle.addEventListener('click', function() {
+                var theme = document.documentElement.getAttribute('data-theme');
+                var newTheme = theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        })();
     </script>
-<script>
-    (function() {
-        var themeToggle = document.getElementById('themeToggle');
-        var currentTheme = localStorage.getItem('theme') || 'light';
-
-        // Применяем сохранённую тему сразу при загрузке
-        document.documentElement.setAttribute('data-theme', currentTheme);
-
-        // Клик по кнопке — переключаем тему
-        themeToggle.addEventListener('click', function() {
-            var theme = document.documentElement.getAttribute('data-theme');
-            var newTheme = theme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-    })();
-</script>
 
 </body>
 </html>
