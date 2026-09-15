@@ -1859,7 +1859,7 @@ html:not(.no-animation) .home-page .home-grid {
 .file-download {
     width: 38px;
     height: 38px;
-    border-radius: 
+    border-radius: 16px; 
 }
 
 
@@ -2225,6 +2225,11 @@ html:not(.no-animation) .home-page .home-grid {
 [data-theme="dark"] .faq-answer p {
     color: #C4B5DC;
     border-top-color: rgba(158, 123, 199, 0.2);
+}
+/* --- Активная ссылка в навигации (тёмная тема) --- */
+[data-theme="dark"] .navigation a.active {
+    border-bottom-color: #B98FE8 !important;
+    color: #B98FE8;
 }
 
 /* --- Плавный переход между темами --- */
